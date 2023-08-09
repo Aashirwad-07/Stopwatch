@@ -1,0 +1,107 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("new.jpg");;
+  background-size: cover;
+  justify-content: center;
+}
+.wrapper{
+  user-select: none;
+  border: 8px solid;
+  border-image: repeating-linear-gradient(135deg,hsl(199, 20%, 22%) 0 10px,#0a78df 0 20px,#f3eeef 0 30px) 8;
+  -webkit-mask: 
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+     var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+     0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: .3s, -webkit-mask-position .3s .3s;
+  
+  
+ 
+}
+.wrapper:hover {
+  --_i: 100%;
+  color: #CC333F;
+  transition: .3s, -webkit-mask-size .3s .3s;
+}
+.wrapper .heading {
+    display: flex;
+    text-transform: capitalize;
+    font-size: 70px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(4, 15, 56);
+    
+    position: relative; /* add position property */
+  }
+  
+  
+.wrapper .time {
+    height: 300px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40%;
+    padding: 0 10px;
+  }
+  
+  
+  
+.wrapper .time span{
+  width: 100px;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 500;
+  color: #333;
+  
+}
+.time span.colon{
+  width: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.wrapper .buttons{
+    text-align: center;
+    margin-top: 20px;
+    
+  }
+  .buttons button {
+    padding: 6px 16px;
+    outline: none;
+    border: none;
+    margin: 0 5px;
+    color: #3b3d4a;
+    background: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.09);
+    transition: all 0.3s ease-in-out; /* add transition property */
+  }
+  
+  .buttons button:hover {
+    background-color: azure;
+    color: black;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3); /* add hover effect */
+    animation: glowing 1s ease-in-out infinite;
+  }
+  
+  .buttons button.active,
+  .buttons button.stopActive{
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  
